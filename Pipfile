@@ -1,0 +1,19 @@
+[[source]]
+
+url = "https://pypi.douban.com/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+
+
+[packages]
+
+scapy = "*"
+
+
+[requires]
+
+python_version = "2.7"
