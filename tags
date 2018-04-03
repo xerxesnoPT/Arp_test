@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+getimg	stealimg.py	/^def getimg(pdata):$/;"	f
+main	arpattack.py	/^def main():$/;"	f
+main	stealimg.py	/^def main():$/;"	f
+passwd_param	tl-wr886n.py	/^            passwd_param = securityEncode(passwd)$/;"	v
+post	tl-wr886n.py	/^def post(url,passwd_param):$/;"	f
+securityEncode	tl-wr886n.py	/^def securityEncode(passwd):$/;"	f
+spoof	arpattack.py	/^def spoof(interface, tip,gip, time):$/;"	f
+urllist	stealimg.py	/^urllist = []$/;"	v
