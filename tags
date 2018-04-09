@@ -10,5 +10,5 @@ main	stealimg.py	/^def main():$/;"	f
 passwd_param	tl-wr886n.py	/^            passwd_param = securityEncode(passwd)$/;"	v
 post	tl-wr886n.py	/^def post(url,passwd_param):$/;"	f
 securityEncode	tl-wr886n.py	/^def securityEncode(passwd):$/;"	f
-spoof	arpattack.py	/^def spoof(interface, tip,gip, time):$/;"	f
+spoof	arpattack.py	/^def spoof(interface, tip,gip, t):$/;"	f
 urllist	stealimg.py	/^urllist = []$/;"	v
